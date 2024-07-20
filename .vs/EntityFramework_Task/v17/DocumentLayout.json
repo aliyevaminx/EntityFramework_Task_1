@@ -1,0 +1,193 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:services\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:extensions\\stringextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\constant\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:constant\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|c:\\users\\amin\\source\\repos\\entityframework_task\\constant\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D77F47ED-79A6-4DFD-98F4-69B98D5E3D1B}|EntityFramework_Task.csproj|solutionrelative:constant\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Student.cs",
+              "RelativeToolTip": "Entities\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T17:51:47.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Services\\StudentService.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\StudentService.cs",
+              "RelativeToolTip": "Services\\StudentService.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAuwMIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T17:50:54.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Teacher.cs",
+              "RelativeDocumentMoniker": "Entities\\Teacher.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Teacher.cs",
+              "RelativeToolTip": "Entities\\Teacher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:06:30.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Group.cs",
+              "RelativeDocumentMoniker": "Entities\\Group.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Entities\\Group.cs",
+              "RelativeToolTip": "Entities\\Group.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:40:06.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GroupService.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\GroupService.cs",
+              "RelativeDocumentMoniker": "Services\\GroupService.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\GroupService.cs",
+              "RelativeToolTip": "Services\\GroupService.cs",
+              "ViewState": "AQIAALEAAAAAAAAAAAAAAMQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T18:51:42.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StringExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Extensions\\StringExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\StringExtensions.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Extensions\\StringExtensions.cs",
+              "RelativeToolTip": "Extensions\\StringExtensions.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T15:23:50.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Constant\\Messages.cs",
+              "RelativeDocumentMoniker": "Constant\\Messages.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Constant\\Messages.cs",
+              "RelativeToolTip": "Constant\\Messages.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABAAAAB5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T08:06:33.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Options.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Constant\\Options.cs",
+              "RelativeDocumentMoniker": "Constant\\Options.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Constant\\Options.cs",
+              "RelativeToolTip": "Constant\\Options.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:56:29.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAYwCsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:54:23.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\TeacherService.cs",
+              "RelativeDocumentMoniker": "Services\\TeacherService.cs",
+              "ToolTip": "C:\\Users\\Amin\\source\\repos\\EntityFramework_Task\\Services\\TeacherService.cs",
+              "RelativeToolTip": "Services\\TeacherService.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAkwAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T07:54:16.031Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
