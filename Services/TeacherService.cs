@@ -178,6 +178,7 @@ namespace EntityFramework_Task.Services
 
         public static void GetDetailsOfTeacher()
         {
+            GetAllTeachers();
         InputIdLine: Messages.InputMessage("teacher Id");
             var inputId = Console.ReadLine();
             int input;

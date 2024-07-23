@@ -18,5 +18,6 @@ namespace EntityFramework_Task.Constant
         public static void HasNotMessage(string title, string content) => Console.WriteLine($"There is not {title} {content}");
         public static void AlreadyExistMessage(string title) => Console.WriteLine($"{title} already exists");
         public static void HasAlreadyMessage(string title, string content) => Console.WriteLine($"{title} has already {content}");
+        public static void MustBeGivenYearsOld(string title) => Console.WriteLine($"Student must be {title} years old");
     }
 }

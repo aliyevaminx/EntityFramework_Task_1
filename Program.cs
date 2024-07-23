@@ -42,6 +42,27 @@ public static class Program
                     case Options.UpdateGroup:
                         GroupService.UpdateGroup();
                         break;
+                    case Options.DeleteGroup:
+                        GroupService.DeleteGroup();
+                        break;
+                    case Options.DetailsOfGroup:
+                        GroupService.GetDetailsOfGroup();
+                        break;
+                    case Options.AllStudents:
+                        StudentService.GetAllStudents();
+                        break;
+                    case Options.AddStudent:
+                        StudentService.AddStudent();
+                        break;
+                    case Options.UpdateStudent:
+                        StudentService.UpdateStudent();
+                        break;
+                    case Options.DeleteStudent:
+                        StudentService.DeleteStudent();
+                        break;
+                    case Options.DetailsOfStudent:
+                        StudentService.GetDetailsOfStudent();
+                        break;
                     default:
                         Messages.InvalidInputMessage("Choice");
                         break;
@@ -63,5 +84,10 @@ public static class Program
         Console.WriteLine("8. Update Group");
         Console.WriteLine("9. Delete Group");
         Console.WriteLine("10. Details of Group");
+        Console.WriteLine("11. All Students");
+        Console.WriteLine("12. Add Student");
+        Console.WriteLine("13. Update Student");
+        Console.WriteLine("14. Delete Student");
+        Console.WriteLine("15. Details of Student");
     }
 }

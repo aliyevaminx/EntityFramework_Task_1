@@ -82,7 +82,7 @@ namespace EntityFramework_Task.Services
                 isTrueFormat = DateTime.TryParseExact(endDateInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out endDate);
                 if (!isTrueFormat || beginDate.Date.AddMonths(6).Date > endDate.Date)
                 {
-                    Messages.InvalidInputMessage("end Date");
+                    Messages.InvalidInputMessage("End Date");
                     goto EnterGroupEndDate;
                 }
 
@@ -138,7 +138,6 @@ namespace EntityFramework_Task.Services
             else
                 Messages.HasNotMessage("teacher", "to add group");
         }
-
         public static void UpdateGroup()
         {
             if (_contexts.Groups.Count() <= 0)
@@ -167,10 +166,11 @@ namespace EntityFramework_Task.Services
                 goto EnterChoiceForGroupName;
             }
 
+            string newGroupName = string.Empty;
             if (choice == "y")
             {
             EnterNewGroupNameLine: Messages.InputMessage("new group name");
-                string newGroupName = Console.ReadLine();
+                newGroupName = Console.ReadLine();
 
                 var existGroupName = _contexts.Groups.FirstOrDefault(n => n.Name == newGroupName);
                 if (string.IsNullOrWhiteSpace(newGroupName) || existGroupName is not null)
@@ -184,17 +184,23 @@ namespace EntityFramework_Task.Services
             choice = Console.ReadLine();
             if (!choice.IsValidChoice())
             {
-                Messages.InvalidInputMessage("choice");
+                Messages.InvalidInputMessage("Choice");
                 goto EnterChoiceForGroupLimit;
             }
-
+            int newGroupLimit = existGroup.Limit;
             if (choice == "y")
             {
             EnterNewGroupLimitLine: Messages.InputMessage("new group limit");
-                string newGroupLimitInpout = Console.ReadLine();
-                int newGroupLimit;
-                isTrueFormat = int.TryParse(newGroupLimitInpout, out newGroupLimit);
-                
+                string newGroupLimitInput = Console.ReadLine();
+                isTrueFormat = int.TryParse(newGroupLimitInput, out newGroupLimit);
+
+                int countOfStudents = _contexts.Students.Count(s => s.GroupId == groupId);
+
+                if (countOfStudents > newGroupLimit)
+                {
+                    Messages.InputMessage("correct new limit or remove some students from group.");
+                    return;
+                }
 
                 if (!isTrueFormat)
                 {
@@ -202,6 +208,190 @@ namespace EntityFramework_Task.Services
                     goto EnterNewGroupLimitLine;
                 }
             }
+
+        EnterChoiceForGroupBeginDate: Messages.WantToChangeMessage("group begin date");
+            choice = Console.ReadLine();
+            if (!choice.IsValidChoice())
+            {
+                Messages.InvalidInputMessage("Choice");
+                goto EnterChoiceForGroupBeginDate;
+            }
+
+            bool endDateChanged = false;
+            DateTime newGroupBeginDate = existGroup.BeginDate;
+            DateTime newGroupEndDate = existGroup.EndDate;
+            if (choice == "y")
+            {
+            EnterNewGroupBeginDate: Messages.InputMessage("new group begin date");
+                string newGroupBeginDateInput = Console.ReadLine();
+
+                isTrueFormat = DateTime.TryParseExact(newGroupBeginDateInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out newGroupBeginDate);
+                if (!isTrueFormat)
+                {
+                    Messages.InvalidInputMessage("new group begin date");
+                    goto EnterNewGroupBeginDate;
+                }
+
+                if (newGroupBeginDate.Date.AddMonths(6) > newGroupEndDate.Date)
+                {
+                    Console.WriteLine("End Date must be at least 6 months later. Change end date");
+                EnterNewGroupEndDate: Messages.InputMessage("new group end date");
+                    string newGroupEndDateInput = Console.ReadLine();
+     
+                    isTrueFormat = DateTime.TryParseExact(newGroupEndDateInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out newGroupEndDate);
+                    if (!isTrueFormat)
+                    {
+                        Messages.InvalidInputMessage("new group end date");
+                        goto EnterNewGroupEndDate;
+                    }
+
+                    if (newGroupBeginDate.Date.AddMonths(6) > newGroupEndDate.Date)
+                    {
+                        Messages.InvalidInputMessage("End Date");
+                        goto EnterNewGroupEndDate;
+                    }
+                    endDateChanged = true;
+                }
+            }
+            if (!endDateChanged)
+            {
+            EnterChoiceForGroupEndDate: Messages.WantToChangeMessage("group end date");
+                choice = Console.ReadLine();
+                if (!choice.IsValidChoice())
+                {
+                    Messages.InvalidInputMessage("Choice");
+                    goto EnterChoiceForGroupEndDate;
+                }
+
+                if (choice == "y")
+                {
+                EnterNewGroupEndDate: Messages.InputMessage("new group end date");
+                    string newGroupEndDateInput = Console.ReadLine();
+
+
+                    isTrueFormat = DateTime.TryParseExact(newGroupEndDateInput, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out newGroupEndDate);
+                    if (!isTrueFormat)
+                    {
+                        Messages.InvalidInputMessage("new group end date");
+                        goto EnterNewGroupEndDate;
+                    }
+
+                    if (existGroup.BeginDate.Date.AddMonths(6).Date > newGroupEndDate.Date )
+                    {
+                        Messages.InvalidInputMessage("End Date");
+                        goto EnterNewGroupEndDate;
+                    }
+                }
+            }
+
+        EnterChoiceForTeacher: Messages.WantToChangeMessage("teacher");
+            choice = Console.ReadLine();
+            if (!choice.IsValidChoice())
+            {
+                Messages.InvalidInputMessage("choice");
+                goto EnterChoiceForTeacher;
+            }
+
+            int teacherId = existGroup.TeacherId;
+
+            if (choice == "y")
+            {
+                TeacherService.GetAllTeachers();
+            EnterTeacherIdLine: Messages.InputMessage("teacher id");
+                string teacherIdInput = Console.ReadLine();
+                isTrueFormat = int.TryParse(teacherIdInput, out teacherId);
+                var teacher = _contexts.Teachers.FirstOrDefault(t => t.Id == teacherId);
+
+                if (!isTrueFormat || teacher is null)
+                {
+                    Messages.InvalidInputMessage("teacher id");
+                    goto EnterTeacherIdLine;
+                }
+
+                var groupCountOfTeacher = _contexts.Groups.Count(g => g.TeacherId == teacherId);
+                if (groupCountOfTeacher >= 2)
+                {
+                    Messages.HasAlreadyMessage("Teacher", "2 groups");
+                    goto EnterTeacherIdLine;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(newGroupName)) { existGroup.Name = newGroupName; }
+            if (newGroupLimit != existGroup.Limit) { existGroup.Limit = existGroup.Limit; }
+            if (newGroupBeginDate != existGroup.BeginDate) { existGroup.BeginDate = newGroupBeginDate; }
+            if (newGroupEndDate != existGroup.EndDate) { existGroup.EndDate = newGroupEndDate;  }
+            if (teacherId != existGroup.TeacherId) { existGroup.TeacherId = teacherId; }
+
+            try
+            {
+                _contexts.SaveChanges();
+            }
+            catch (Exception)
+            {
+                Messages.ErrorHasOccured();
+            }
+
+
+            Messages.SuccessMessage("Group", "updated");
+        }
+        public static void DeleteGroup()
+        {
+            GetAllGroups();
+        InputIdLine: Messages.InputMessage("group Id");
+            var inputId = Console.ReadLine();
+            int Id;
+            bool isTrueIdFormat = int.TryParse(inputId, out Id);
+            if (!isTrueIdFormat)
+            {
+                Messages.InvalidInputMessage("Group ID");
+                goto InputIdLine;
+            }
+
+            var group = _contexts.Groups.Find(Id);
+            if (group is null)
+            {
+                Messages.NotFoundMessage("Group");
+                return;
+            }
+
+            _contexts.Groups.Remove(group);
+
+            try
+            {
+                _contexts.SaveChanges();
+            }
+            catch (Exception)
+            {
+                Messages.ErrorHasOccured();
+            }
+
+            Messages.SuccessMessage("Group", "deleted");
+        }
+        public static void GetDetailsOfGroup()
+        {
+            GetAllGroups();
+
+        InputIdLine: Messages.InputMessage("group Id");
+            var inputId = Console.ReadLine();
+            int input;
+            bool isTrueIdFormat = int.TryParse(inputId, out input);
+            if (!isTrueIdFormat)
+            {
+                Messages.InvalidInputMessage("group Id");
+                goto InputIdLine;
+            }
+
+            var group = _contexts.Groups.FirstOrDefault(g => g.Id == input);
+            if (group is null)
+            {
+                Messages.NotFoundMessage("student");
+                return;
+            }
+
+            var teacher = _contexts.Teachers.FirstOrDefault(t => t.Id == group.TeacherId);
+            Console.WriteLine($"Id: {group.Id} Name: {group.Name} Limit: {group.Limit} " +
+                $"Begin Date: {group.BeginDate} End Date: {group.EndDate} Teacher: {teacher.Name} {teacher.Surname} ");
+
 
         }
     }

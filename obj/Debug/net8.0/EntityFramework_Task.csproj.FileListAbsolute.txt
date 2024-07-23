@@ -129,3 +129,4 @@ C:\Users\Amin\source\repos\EntityFramework_Task\obj\Debug\net8.0\refint\EntityFr
 C:\Users\Amin\source\repos\EntityFramework_Task\obj\Debug\net8.0\EntityFramework_Task.pdb
 C:\Users\Amin\source\repos\EntityFramework_Task\obj\Debug\net8.0\EntityFramework_Task.genruntimeconfig.cache
 C:\Users\Amin\source\repos\EntityFramework_Task\obj\Debug\net8.0\ref\EntityFramework_Task.dll
+C:\Users\Amin\source\repos\EntityFramework_Task\obj\Debug\net8.0\EntityFramework_Task.sourcelink.json

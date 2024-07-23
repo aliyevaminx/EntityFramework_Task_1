@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EntityFramework_Task")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8804ac26994f5ad623cad908dd84b6b754e5fb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("EntityFramework_Task")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EntityFramework_Task")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
